@@ -28,7 +28,7 @@ io.on('connection', socket => {
 
     // Listen for disconnect event
     socket.on('disconnect', () => {
-        socket.broadcast.emit('user-left', users[socket.id]);
+        socket.broadcast.emit('user-left', {name: users[socket.id], message: "leaves the chat"});
         delete users[socket.id];
     });
 });
