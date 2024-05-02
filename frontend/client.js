@@ -32,7 +32,7 @@ socket.on('user-joined', data => {
 // Listen for receive message event
 socket.on('receive-message', data => {
     appendMessage(`${data.name}: ${data.message}`, 'left');
-    playSound();
+    // playSound();
 });
 
 // Send message when form is submitted
